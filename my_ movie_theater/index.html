@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardina's Cinema</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="theater">
+        <h1>Welcome to Fardina's Cinema 🎬</h1>
+        <video controls class="trailer">
+            <source src="Wildlife.wmv" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="buttons">
+            <button onclick="playAgain()">Play Again 🔁</button>
+            <button onclick="rateMovie()">Rate Movie ⭐️</button>
+        </div>
+    </section>
+
+    <script>
+        function playAgain() {
+            const video = document.querySelector('.trailer');
+            video.currentTime = 0;
+            video.play();
+        }
+        function rateMovie() {
+            alert('Thanks for rating! 🍿');
+        }
+    </script>
+</body>
+</html>
